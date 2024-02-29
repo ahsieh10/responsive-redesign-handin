@@ -1,0 +1,134 @@
+  <!-- TO RUN IN BROWSER:
+    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
+    2. Right click html file and either run in default browser or another browser
+  -->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css"/>
+      <title>Syllabus and Course Policies</title>
+  </head>
+  <body>
+    <div aria-label='Website title' class = 'website_title'>
+      <h1>UIUX Project 2: Responsive Redesign</div>
+    </div>
+    <div class = 'dropdown'>
+      Go To Page
+    </div>
+    <div class = 'dropdown'>
+      Table of Contents
+    </div>
+    <div aria-label='Website content'id='website_content'>
+      <div class = 'center_bar'>
+        <div class = 'page_header'>
+          <h2>Introduction to chosen website</h2>
+          <p>The website I chose for the responsive redesign is the course website for CS19 at Brown.</p>
+          <a href="https://cs.brown.edu/courses/cs019/2023/policy.html">Here is the link to the website.</a>
+          <p>Attached below is a screenshot of the website:</p>
+          <img src="cs19.png">
+        </div>
+        <div class = 'body_element'>
+          <h3>Reasons for redesign</h3>
+          <div class = 'content'>
+            <p>I first decided to choose this website because, as a student of this course 2 years ago who moved on to TA and HTA the course, I still have trouble navigating the page at times to find the information that I want.</p>
+            <h4>After examining deeper with WAIVE and interacting with the website, these were the accessibility issues that I noticed:</h4>
+            <ul>
+              <li>When hovering over or clicking clickable items on the page, there was no indication of a change in the UI, so there was no way of knowing that the element was clickable.</li>
+              <li>The text on the sidebar is quite small.</li>
+              <li>The text on the page itself utilizes limited page hierarchy and is mainly perceived as a large block of text.</li>
+              <li>It is difficult to distinguish between the navigation bar of the website and the navigation bar of the page.</li>
+              <li>There is no use of a h1 header on this webpage.</li>
+              <li>The contrast of the text from the sidebar was not great enough.</li>
+              <li>The language attribute is missing.</li>
+              <li>There are no accessibility labels on the website.</li>
+            </ul>
+          </div>
+        </div>
+        <div class = 'page_header'>
+          <h2>Checkpoint 1: Sketching and Wireframing</h2>
+        </div>
+        <div class = 'body_element'>
+          <h3>Step 1: Speed Sketching</h3>
+          <div class = 'content'>
+            <p>In this step, I did 9 speed sketches in 9 minutes to brainstorm ideas for my revision, as shown here:</p>
+            <img src="SpeedSketch.png">
+            <p>I thought of many things in this process, but the main problem that I wanted to tackle was redesigning the layout of the content to make the content more intuitive to the user.</p>
+            </ol>
+          </div>
+        </div>
+        <div class = 'body_element'>
+          <h3>Step 2: Final Sketch</h3>
+          <div class = 'content'>
+            <p>Here, I combine some of the above properties in the speed sketch into one final sketch. My main vision was to utilize the original empty space on the right of the screen to place elements like a table of contents bar, and the place the actual content in the center of the page.</p>
+            <img src="FinalSketch.png">
+          </div>
+        </div>
+        <div class = 'body_element'>
+          <h3>Step 3: Low-Fi Wireframes</h3>
+          <div class = 'content'>
+            <p>Here were the low-fi wireframes that I created in Figma. For the tablet and the phone, I only noted the differences between these and the desktop version: improvements that I made in all 3 designs from the original are cited solely on the desktop version.</p>
+            <p>Overall, I focused on increasing the visibility of clickable elements to address the second bullet point above, created large headers to address the third bullet point, and I also colored the navigation sidebar and the contents bar differently with more contrast to address the fifth bullet point.</p>
+            <p>Desktop:</p>
+            <img src="Desktop.png">
+            <p>Tablet:</p>
+            <img src="Tablet.png">
+            <p>Phone:</p>
+            <img src="Phone.png">
+          </div>
+        </div>
+        <div class = 'page_header'>
+          <h2>Checkpoint 2: Style Guide and Hi-Fi Design</h2>
+        </div>
+        <div class = 'body_element'>
+          <h3>Step 1: Style Guide</h3>
+          <div class = 'content'>
+            <p>Here is the style guide I used for the Hi-Fi design. I chose colors with the provided color picker and followed through with it. However, as I later learn when actually deploying the website, I ran into many contrast problems that I would fix in my later product. I also was unable to incorporate the bubbled in-text links in the final product, but it is here for reference.</p>
+            <img src="StyleGuide.png">
+          </div>
+        </div>
+        <div class = 'body_element'>
+          <h3>Step 2: Hi-Fidelity Mockup</h3>
+          <div class = 'content'>
+            <p>Using the style guide, here are the final products of the mockups. I had to do a bit of resizing to fit text into place.</p>
+            <p>Desktop:</p>
+            <img src="DesktopHi.png">
+            <p>Tablet:</p>
+            <img src="TabletHi.png">
+            <p>Phone:</p>
+            <img src="PhoneHi.png">
+          </div>
+        </div>
+        <div class = 'page_header'>
+          <h2>Checkpoint 3: Development</h2>
+          <p>After the hi-fi mockups, it was finally time to put the website into HTML/CSS.</p>
+          <p>I learned that the font that I had used in Figma was not available locally in CSS, so I had to import the file from Google Fonts.</p>
+          <p>Overall, it was quite difficult to put the elements that I had wanted into place. When I tried to place icons in the navigation bar, they were very distorted and I struggled to make them line up in the center of the button, so I had to forgo it.</p>
+          <p>Also, as mentioned above in checkpoint 2, I thought that I had created enough contrast in the words, but when I fed it through the accessibility detector, I was still marked for no contrast, so I had to modify the color palette a bit.</p>
+          <p>Figuring out how to move the credits bar to the bottom of the page was also quite an experience as well; I realized that I had to copy and paste the same element twice and enable/disable visibility for both to make it happen.</p>
+          <p>Also, I had to increase the height of the buttons to compensate for the text of the buttons wrapping around into the second line.</p>
+          <a href="https://ahsieh10.github.io/responsive-redesign/">This is the final product.</a>
+          <p>Overall, I was met with many challenges, but this was quite a satisfying process.</p>
+        </div>
+        <div id = 'bottom' class = 'credits sidebar_item'>
+          <div class = 'sidebar_title'>
+            Credits
+          </div>
+          <p>This website was made by Allison Hsieh</p>
+        </div>
+      </div>
+      <div id = 'right' class = 'right_bar'>
+        <div class = 'credits sidebar_item'>
+          <div class = 'sidebar_title'>
+            Credits
+          </div>
+          <p>This website was made by Allison Hsieh.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
